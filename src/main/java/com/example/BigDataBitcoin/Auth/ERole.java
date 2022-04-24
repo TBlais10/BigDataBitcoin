@@ -1,4 +1,4 @@
-package Auth;
+package com.example.BigDataBitcoin.Auth;
 
 public enum ERole {
     ROLE_ADMIN,

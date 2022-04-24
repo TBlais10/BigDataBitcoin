@@ -1,8 +1,8 @@
 package com.example.BigDataBitcoin;
 
-import Auth.ERole;
-import Repositories.RoleRepository;
-import Repositories.UserRepository;
+import com.example.BigDataBitcoin.Auth.ERole;
+import com.example.BigDataBitcoin.Repositories.RoleRepository;
+import com.example.BigDataBitcoin.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

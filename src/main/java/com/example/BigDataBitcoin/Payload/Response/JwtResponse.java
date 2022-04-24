@@ -1,4 +1,4 @@
-package Payload.Response;
+package com.example.BigDataBitcoin.Payload.Response;
 
 import java.util.List;
 

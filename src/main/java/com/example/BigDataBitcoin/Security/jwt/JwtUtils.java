@@ -1,6 +1,6 @@
-package Security.jwt;
+package com.example.BigDataBitcoin.Security.jwt;
 
-import Security.services.UserDetailsImpl;
+import com.example.BigDataBitcoin.Security.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

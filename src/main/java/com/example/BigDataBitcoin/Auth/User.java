@@ -1,4 +1,4 @@
-package Auth;
+package com.example.BigDataBitcoin.Auth;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

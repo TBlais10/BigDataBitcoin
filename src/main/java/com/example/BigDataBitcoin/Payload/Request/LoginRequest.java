@@ -1,4 +1,4 @@
-package Payload.Request;
+package com.example.BigDataBitcoin.Payload.Request;
 
 public class LoginRequest {
     private String username;

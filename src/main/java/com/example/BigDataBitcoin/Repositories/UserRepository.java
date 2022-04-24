@@ -1,10 +1,9 @@
-package Repositories;
+package com.example.BigDataBitcoin.Repositories;
 
-import Auth.User;
+import com.example.BigDataBitcoin.Auth.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Repository

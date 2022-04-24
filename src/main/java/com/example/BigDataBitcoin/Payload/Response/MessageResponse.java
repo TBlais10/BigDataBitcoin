@@ -1,4 +1,4 @@
-package Payload.Response;
+package com.example.BigDataBitcoin.Payload.Response;
 
 public class MessageResponse {
     private String message;

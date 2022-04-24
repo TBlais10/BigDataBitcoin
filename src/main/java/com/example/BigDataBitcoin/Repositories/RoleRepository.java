@@ -1,7 +1,7 @@
-package Repositories;
+package com.example.BigDataBitcoin.Repositories;
 
-import Auth.ERole;
-import Auth.Role;
+import com.example.BigDataBitcoin.Auth.ERole;
+import com.example.BigDataBitcoin.Auth.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

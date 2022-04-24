@@ -1,7 +1,7 @@
-package Security.services;
+package com.example.BigDataBitcoin.Security.services;
 
-import Auth.User;
-import Repositories.UserRepository;
+import com.example.BigDataBitcoin.Auth.User;
+import com.example.BigDataBitcoin.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
