@@ -3,8 +3,11 @@ package com.example.BigDataBitcoin;
 import com.example.BigDataBitcoin.Auth.ERole;
 import com.example.BigDataBitcoin.Repositories.RoleRepository;
 import com.example.BigDataBitcoin.Repositories.UserRepository;
+import org.springframework.batch.core.*;
+import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -14,14 +17,21 @@ import org.springframework.web.client.RestTemplate;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.UUID;
 
 @SpringBootApplication
-public class BigDataBitcoinApplication {
+public class BigDataBitcoinApplication implements CommandLineRunner {
 	@Autowired
 	private UserRepository repository;
 
 	@Autowired
 	private RoleRepository roleRepository;
+
+	@Autowired
+	private JobLauncher jobLauncher;
+
+	@Autowired
+	private Job job;
 
 	@Value("${spring.datasource.driver-class-name}")
 	public String myDriver;
@@ -62,6 +72,18 @@ public class BigDataBitcoinApplication {
 			}
 		}
 		return builder.build();
+	}
+
+	@Override
+	public void run(String... args) throws Exception{
+		JobParameters jobParameters = new JobParametersBuilder()
+				.addString("date", UUID.randomUUID().toString())
+				.addLong("JobID", System.currentTimeMillis())
+				.addLong("time", System.currentTimeMillis()).toJobParameters();
+
+		JobExecution execution = jobLauncher.run(job, jobParameters);
+
+		System.out.println("Status : : " + execution.getStatus());
 	}
 
 }
